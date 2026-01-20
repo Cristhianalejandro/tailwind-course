@@ -1,271 +1,244 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+
+<html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Fit Club Premium | Magazine Edition</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;family=Archivo+Black&amp;family=Oswald:wght@700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#f48915",
-                        dark: "#0a0a0a",
-                        surface: "#1a1a1a",
-                        "light-grey": "#e5e7eb",
-                    },
-                    fontFamily: {
-                        sans: ["Inter", "sans-serif"],
-                        display: ["Archivo Black", "sans-serif"],
-                        accent: ["Oswald", "sans-serif"],
-                    },
-                },
-            },
-        };
-    </script>
-<style type="text/tailwindcss">
-        body {
-            width: 100%;
-        }
-
-        @layer utilities {
-            .text-outline {
-                -webkit-text-stroke: 1.5px white;
-                color: transparent;
-            }
-            .text-outline-orange {
-                -webkit-text-stroke: 1.5px #f48915;
-                color: transparent;
-            }
-            .vertical-text {
-                writing-mode: vertical-rl;
-                text-orientation: mixed;
-            }
-            .magazine-grid {
-                display: grid;
-                grid-template-columns: repeat(12, 1fr);
-            }
-            .skew-card {
-                transform: skewY(-2deg);
-            }
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f9e406",
+            "background-light": "#f8f8f5",
+            "background-dark": "#181811",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .neon-glow {
+      box-shadow: 0 0 15px rgba(249, 228, 6, 0.3);
+    }
+    .text-outline {
+      -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+      color: transparent;
+    }
+  </style>
 <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
   </head>
-<body class="bg-dark text-white font-sans antialiased overflow-x-hidden w-full">
-<div class="max-w-md mx-auto relative min-h-screen bg-dark pb-24 shadow-[0_0_100px_rgba(0,0,0,0.8)] w-full">
-<header class="p-6 flex justify-between items-center sticky top-0 z-[100] bg-dark/80 backdrop-blur-lg w-full">
-<div class="flex items-center gap-1">
-<div class="bg-primary w-6 h-6 flex items-center justify-center">
-<span class="material-symbols-outlined text-dark text-sm font-bold">fitness_center</span>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<!-- Top Navigation Bar -->
+<div class="flex items-center bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+<div class="text-white flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-3xl">menu</span>
 </div>
-<span class="font-display text-sm tracking-tighter">THE FIT CLUB</span>
-</div>
-<button class="bg-primary text-dark px-5 py-1.5 font-display text-[10px] uppercase tracking-widest hover:bg-white transition-colors">
-                Join Now
-            </button>
-</header>
-<section class="relative pt-4 overflow-hidden">
-<div class="px-6 mb-4">
-<span class="bg-primary text-dark font-display text-[9px] px-2 py-0.5 uppercase tracking-[0.2em]">Premium Est. 2024</span>
-</div>
-<div class="relative">
-<div class="absolute inset-0 z-20 flex flex-col justify-center pointer-events-none px-6">
-<h1 class="font-display text-7xl leading-[0.85] uppercase italic flex flex-col">
-<span class="text-outline">SHAPE</span>
-<span class="text-white drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">YOUR</span>
-<span class="text-outline-orange">IDEAL</span>
-<span class="text-primary translate-x-4">BODY</span>
-</h1>
-</div>
-<div class="relative z-10 w-[110%] -left-[5%] h-[480px]">
-<img alt="Athlete" class="w-full h-full object-cover grayscale brightness-75 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_yJ5WaOsKXf7-5g9HJXxyBgErYGorI5WtkRB-oneEExA5v-TdjYKAyIj8vwCLGNTBqNibRVvwS_rH7HRZuBpXMgR1goY78pcs6g_haEhP5_stFAcYuR9vnT3jQ_owGuSS3rs735tXTurKz3zAG-feFJoRDtATy_yOVyHPn2S54jitoQEowXRxLoFa_Lrox77SN5LTFU9fKV1OwmH0SLY1Qrx8_yMMzeLy3-_a4ZYlkGN2GTKJkhvcWfo8R5jwYwUghOlwCv5J-s1W"/>
-<div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
-</div>
-<div class="absolute top-1/4 right-4 z-30 bg-white p-3 rotate-12 shadow-2xl">
-<p class="text-dark font-display text-[10px] uppercase leading-none">Heart Rate</p>
-<p class="text-dark font-display text-2xl leading-none">116<span class="text-[10px]">BPM</span></p>
+<h2 class="text-white text-lg font-black leading-tight tracking-[-0.015em] flex-1 uppercase">The Fit Club</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
 </div>
 </div>
-<div class="grid grid-cols-3 border-y border-white/10 mt-8">
-<div class="p-4 border-r border-white/10 text-center">
-<p class="font-display text-primary text-xl">+140</p>
-<p class="text-[8px] uppercase tracking-widest text-zinc-500">Expert Coaches</p>
+<!-- Section: Why Choose Us (Asymmetric Grid) -->
+<section class="px-4 py-8">
+<h2 class="text-white text-3xl font-black leading-tight tracking-tight pb-6 uppercase italic">Why Choose <span class="text-primary">Us</span></h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Large Feature Card -->
+<div class="col-span-2 bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-6 aspect-[16/9] relative overflow-hidden group" data-alt="Intense athlete training with battle ropes in gym" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJ1vsusHvBlVVgyUBLckR6oJd1bpoJwNV2PkqY_ZQomhawLnv0zX3IbQOFUcfpYK9hcnMLiDo_d_KM6--lW9_dMcVwKS1RpDS95NdoQMtXPrFoGEsXx12V0lQ4KUPNpGbfFL26Yi5iRoH4lSYnreCMCrMZ3jUUs6AVRkt9IOcj7y0GU_xBgQMHC1XRoNny0svuoBohx6QOdQad6zafXSDCT4gotb4QwXAYpaESdWr-RzmvNqJxrZWnIhMn--QmTRTVEjfvVoMwx50z");'>
+<div class="absolute top-4 left-4 bg-primary text-background-dark p-2 rounded-lg">
+<span class="material-symbols-outlined font-bold">bolt</span>
 </div>
-<div class="p-4 border-r border-white/10 text-center">
-<p class="font-display text-white text-xl">+978</p>
-<p class="text-[8px] uppercase tracking-widest text-zinc-500">Members</p>
-</div>
-<div class="p-4 text-center">
-<p class="font-display text-white text-xl">+50</p>
-<p class="text-[8px] uppercase tracking-widest text-zinc-500">Programs</p>
-</div>
-</div>
-</section>
-<section class="py-16 px-6 relative">
-<div class="absolute -left-10 top-20 vertical-text font-display text-6xl text-white/5 whitespace-nowrap uppercase tracking-tighter select-none">
-                TRAINING PROGRAMS
-            </div>
-<h2 class="font-display text-4xl uppercase leading-none mb-12 flex flex-col">
-<span class="text-outline italic text-2xl">Explore Our</span>
-<span>Programs</span>
-</h2>
-<div class="relative space-y-[-20px]">
-<div class="relative z-10 bg-primary p-8 w-[85%] skew-card shadow-2xl">
-<div class="flex justify-between items-start">
-<span class="material-symbols-outlined text-dark text-4xl font-bold">fitness_center</span>
-<span class="font-accent text-dark text-4xl opacity-20 italic">01</span>
-</div>
-<h3 class="font-display text-dark text-2xl uppercase mt-4">Strength</h3>
-<p class="text-dark/80 text-xs font-bold uppercase mt-2">Maximum power gains.</p>
-</div>
-<div class="relative z-20 bg-white p-8 w-[85%] ml-auto skew-card shadow-2xl -rotate-2">
-<div class="flex justify-between items-start">
-<span class="material-symbols-outlined text-dark text-4xl font-bold">directions_run</span>
-<span class="font-accent text-dark text-4xl opacity-20 italic">02</span>
-</div>
-<h3 class="font-display text-dark text-2xl uppercase mt-4">Cardio</h3>
-<p class="text-dark/80 text-xs font-bold uppercase mt-2">Endurance focus.</p>
-</div>
-<div class="relative z-30 bg-surface border-2 border-primary p-8 w-[80%] skew-card shadow-2xl rotate-1">
-<div class="flex justify-between items-start">
-<span class="material-symbols-outlined text-primary text-4xl font-bold">local_fire_department</span>
-<span class="font-accent text-white text-4xl opacity-10 italic">03</span>
-</div>
-<h3 class="font-display text-white text-2xl uppercase mt-4">Fat Burning</h3>
-<p class="text-zinc-500 text-xs font-bold uppercase mt-2">Burn more, live more.</p>
-</div>
-</div>
-</section>
-<section class="py-16 bg-white text-dark overflow-hidden">
-<div class="px-6 mb-8">
-<h2 class="font-display text-5xl italic uppercase leading-[0.8] tracking-tighter">
-                    WHY<br/><span class="text-zinc-400">CHOOSE</span><br/>US?
-                </h2>
-</div>
-<div class="magazine-grid gap-1 px-2">
-<div class="col-span-8 row-span-2 relative group overflow-hidden">
-<img alt="Training" class="w-full h-[300px] object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-Wt4y_NPBNSLSUFr0Y0biAVn0Q9fEOf7MWkK9i-zHj0hGlfJejOwsSj5G41IQNV7sIkV7aD-5LZfY3LeQjLQkijsGna1_X9J8SsLsOa_2WdSInqmdnBFKSRNwbtg_KGTBKwcwUurxAsLVAcjXA9eXJOsc7dgVOiF380pW518AZzSN421AK7XMLyT22njK6pdlgUJTfz83I_9PJh2Xw3GxppKW4f3kutx61YFTUYuL7VVX9uhycqKPVNaVtbFEoBw3WPGKCUCB03o3"/>
-<div class="absolute bottom-4 left-4 right-4">
-<div class="bg-primary px-3 py-1 inline-block">
-<p class="font-display text-[10px] text-dark uppercase tracking-widest">Expert Coaching</p>
-</div>
-</div>
-</div>
-<div class="col-span-4 relative">
-<img alt="Lifting" class="w-full h-[148px] object-cover grayscale brightness-75" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJkvycAhfzKSUkuJzk1DwICBsjRnvPS7YlwTbtosuzMlvtAED_wX_wu3vdr7cmgB3bGrSCYdbIMctb5ywEe_sqaEPi08QI8NsP4tuudg4WXDQLBPti0GTPmvJm32XTiFdCJhCyhlnxJGy2LHQQTCnz_bliu6Zp79l4jxuaXb5G7yi-bL-nknker-ddRJZXUkgjWnk7CNdBWXjScbJZIjJyvcIe71AXZSgxOyIltnVM0fSqAjFdZAoqe_fITCLfK2qr7__AlEtcf8-a"/>
-<div class="absolute inset-0 flex items-center justify-center p-2 text-center">
-<p class="font-accent text-white text-[9px] uppercase leading-tight font-bold bg-dark/50 p-1">140+ PROS</p>
-</div>
-</div>
-<div class="col-span-4 relative">
-<img alt="Detail" class="w-full h-[148px] object-cover grayscale brightness-75" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83EZxpNxSFisayCs10BpNm3IhM9NrXbR0kpvLA3RL04f0av1J7E1acd-iTFqfbTtxXoZ8Q4IdYe67kGcGgcHxnqVLsH1_VNVHAUCqjrK-Uwx5eJILNo71YaF_9wUA78--7ez-o_uSRPb__R4UH32133w91ovXRLFktZcWL-L4jxznJ4xBRv4Ng-EHRLwZly2Q4ohpsWwmUQNUnDKjr6s9JsT5jet-wFgvAP02NuMfbGj6FaQYyuDpM570pzna0fdAVZhewdIdXt4_"/>
-<div class="absolute inset-0 flex items-end p-2">
-<p class="font-accent text-white text-[9px] uppercase font-bold">POWER FOCUS</p>
-</div>
-</div>
-<div class="col-span-12 mt-1 relative">
-<img alt="Gym" class="w-full h-40 object-cover grayscale brightness-50 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWDflezYZBBNsurXX5Ul0fHOfcISmbgPPO9_ntdz96UWR4kkAg2I_ZYx8W61iaC1UeGvkjPFIEfyh7p7G1lr_kHH-FsPbTYKQuxSqPDARBnngDId47gFD08-fHYT4DyXlfrCfa8FJTQrlVUud6IjvjNGn3j2SR7GmMUaYMSSGU2i0JRax5ucEQtJBFHXgd5b7T0tgNWt3IBtTFsDE6ivYXJ2Xp31N1TV1bVkoZpGjURV8B7EHTwIuj5Ms_FE-F9eMtsgPATY94DDTo"/>
-<div class="absolute inset-0 flex items-center justify-between px-6">
-<div class="flex flex-col">
-<span class="text-white font-display text-2xl italic leading-none">FASTER</span>
-<span class="text-primary font-display text-4xl italic leading-none">SMARTER</span>
-</div>
-<div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center">
-<span class="material-symbols-outlined text-white">bolt</span>
-</div>
-</div>
-</div>
-</div>
-<div class="px-6 mt-12 space-y-4">
-<div class="flex items-center gap-4 group">
-<span class="font-display text-2xl text-primary italic">01</span>
-<p class="font-display text-sm uppercase tracking-tighter border-b border-zinc-200 flex-1 pb-1">1 FREE PROGRAM FOR NEWBIES</p>
-</div>
-<div class="flex items-center gap-4 group">
-<span class="font-display text-2xl text-primary italic">02</span>
-<p class="font-display text-sm uppercase tracking-tighter border-b border-zinc-200 flex-1 pb-1">RELIABLE TRAINING PARTNERS</p>
-</div>
-</div>
-</section>
-<section class="py-16 px-6 bg-dark">
-<div class="text-center mb-12">
-<h2 class="font-display text-4xl uppercase leading-none italic">
-<span class="text-outline">Ready To</span><br/>
-<span class="text-white">Start Your</span><br/>
-<span class="text-primary">Journey?</span>
-</h2>
-</div>
-<div class="relative bg-zinc-900 border border-zinc-800 p-8 overflow-hidden group">
-<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-<div class="flex justify-between items-end mb-8">
 <div>
-<p class="text-primary font-display text-xs uppercase tracking-[0.2em] mb-1">Elite Plan</p>
-<h4 class="font-display text-5xl">$45</h4>
-</div>
-<div class="bg-primary p-2">
-<span class="material-symbols-outlined text-dark font-bold">workspace_premium</span>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Elite Performance</p>
+<p class="text-white text-2xl font-black leading-tight">Pro-Level Coaching</p>
 </div>
 </div>
-<ul class="space-y-4 mb-10">
-<li class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-zinc-400">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> 8 Hours Training
-                    </li>
-<li class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-zinc-400">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Personal Coach
-                    </li>
-<li class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-zinc-400">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Custom Diet
-                    </li>
-</ul>
-<button class="w-full bg-white text-dark py-4 font-display text-xs uppercase tracking-[0.3em] hover:bg-primary transition-colors">
-                    Join The Elite
-                </button>
+<!-- Small Feature Card 1 -->
+<div class="col-span-1 bg-cover bg-center flex flex-col gap-2 rounded-xl justify-end p-4 aspect-[3/4]" data-alt="High tech modern gym equipment cardio machines" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 80%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_pHSwFEtTHqdUYCAwGtyXHwI2NFLm72oOWEQ8fpaw7FzuPIYrWXE8vFeJLnOaTt46YFfQ_VGdaVsatX-urD6CSwR08pxdK5Zb2aV92itMkUjVqlbn00U4WFPQhF_S1pRk1Zvm70ZEliCwpUqaFnli2slEb84Y_NrDGSKxiz5wLMcY5Ho4Mif-Ocs_fFHIU6Nf-S0MYnNazd-QG5ZSEHa01Q07f00O8HqXN4fmuUpjsY7Wo6wgmyY0QL3HikG9NX-Vs2k7Txa_mtos");'>
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<p class="text-white text-sm font-bold leading-tight">24/7 Premium Access</p>
+</div>
+<!-- Small Feature Card 2 -->
+<div class="col-span-1 bg-cover bg-center flex flex-col gap-2 rounded-xl justify-end p-4 aspect-[3/4]" data-alt="Close up of adjustable dumbbells on rack" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 80%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAGtsZ1YikOQk0zoD6AkmWbgyNyi5ZR7cd9gK5aH1Z1D6att2zIRsOpVQ38e46d_C9jqbhF3JLoO5BIczILZwMMZXjybP-FXPEmJSMlaAkI2iti_MObQcqQCnNa9g5HSV80TkE8YZjqE5rrIzzgapXjSEYSxmYv3wN1uMiL3AFUtRISCNatyegACo9YhUBn9H65r1U7REZDSqudLp-L48hxsz3BvkmwkeeMZeQ1DmxJMGiuoC1ZOtQZJybu0PT8JbU4jfSnHRKYiIl");'>
+<span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+<p class="text-white text-sm font-bold leading-tight">Modern Equipment</p>
+</div>
 </div>
 </section>
-<footer class="bg-dark px-6 py-12 border-t border-white/5">
-<div class="flex flex-col items-center gap-6">
-<div class="flex gap-8">
-<span class="material-symbols-outlined text-zinc-600 hover:text-primary transition-colors cursor-pointer">share</span>
-<span class="material-symbols-outlined text-zinc-600 hover:text-primary transition-colors cursor-pointer">shopping_bag</span>
-<span class="material-symbols-outlined text-zinc-600 hover:text-primary transition-colors cursor-pointer">language</span>
+<!-- Section: Membership Plans (Glassmorphism) -->
+<section class="px-4 py-12 bg-[#1d1d15]">
+<div class="mb-8">
+<h2 class="text-white text-3xl font-black leading-tight tracking-tight uppercase italic">Member <span class="text-primary">Plans</span></h2>
+<p class="text-gray-400 text-sm mt-2">Unlock your potential with our flexible membership tiers.</p>
 </div>
-<div class="flex items-center gap-2 grayscale">
-<div class="bg-zinc-800 p-1">
-<span class="material-symbols-outlined text-zinc-400 text-sm">fitness_center</span>
+<div class="flex flex-col gap-6">
+<!-- Basic Plan -->
+<div class="flex flex-col gap-4 rounded-xl glass-card p-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-gray-400 text-sm font-bold uppercase tracking-widest">Basic</h1>
+<p class="flex items-baseline gap-1 text-white">
+<span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">$29</span>
+<span class="text-gray-400 text-base font-bold leading-tight">/mo</span>
+</p>
 </div>
-<span class="font-display text-lg tracking-tighter text-zinc-400">THE FIT CLUB</span>
+<div class="space-y-3 py-2">
+<div class="text-[13px] font-medium flex gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+            Full Gym Access
+          </div>
+<div class="text-[13px] font-medium flex gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+            Basic Locker Access
+          </div>
 </div>
-<p class="text-[8px] text-zinc-700 uppercase tracking-[0.4em]">All Rights Reserved © 2024</p>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-full h-12 bg-white/10 text-white text-sm font-bold border border-white/20">
+          Select Basic
+        </button>
+</div>
+<!-- Premium Plan (Featured) -->
+<div class="flex flex-col gap-4 rounded-xl border-2 border-primary bg-background-dark p-6 neon-glow relative overflow-hidden">
+<div class="absolute top-0 right-0">
+<div class="bg-primary text-background-dark text-[10px] font-black uppercase px-6 py-1 rotate-45 translate-x-4 translate-y-2">Popular</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h1 class="text-primary text-sm font-bold uppercase tracking-widest">Premium</h1>
+</div>
+<p class="flex items-baseline gap-1 text-white">
+<span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">$59</span>
+<span class="text-primary/70 text-base font-bold leading-tight">/mo</span>
+</p>
+</div>
+<div class="space-y-3 py-2">
+<div class="text-[13px] font-medium flex gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+            All Basic Features
+          </div>
+<div class="text-[13px] font-medium flex gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+            Unlimited Group Classes
+          </div>
+<div class="text-[13px] font-medium flex gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+            Recovery Spa Access
+          </div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-full h-12 bg-primary text-background-dark text-sm font-black uppercase tracking-wider">
+          Join Premium
+        </button>
+</div>
+<!-- VIP Plan -->
+<div class="flex flex-col gap-4 rounded-xl glass-card p-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-gray-400 text-sm font-bold uppercase tracking-widest">VIP</h1>
+<p class="flex items-baseline gap-1 text-white">
+<span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">$99</span>
+<span class="text-gray-400 text-base font-bold leading-tight">/mo</span>
+</p>
+</div>
+<div class="space-y-3 py-2">
+<div class="text-[13px] font-medium flex gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+            Personal Trainer (4x)
+          </div>
+<div class="text-[13px] font-medium flex gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+            Custom Nutrition Plan
+          </div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-full h-12 bg-white/10 text-white text-sm font-bold border border-white/20">
+          Go VIP
+        </button>
+</div>
+</div>
+</section>
+<!-- Section: Editorial Testimonial (Mathew) -->
+<section class="relative w-full h-[600px] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Portrait of fit man Mathew in athletic wear" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAusKnkHwDQzGMPgLornxR_7kFTqeFwoBxyBDEq08fGhU0oOSnw1cObxCXdMZV4paExEtNnWLC1gxwTy0bwTLQwWL3cFT-FzHCAtQcXX2-0AybFiZGziiSbTTLux8a4UqLPsZWwObqbqFMeh8uGfBherL19srzKmkqwELhsJqZIIKqbsM_y75uuurZT9TLE4ZhjSBBeHd-inXu869GVeResAGt1HejGwsE_sVrdfCxQSj0Os2q1s4e4IfEoWxtH8xTU5k8WL17P3NrG");'>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
+</div>
+<div class="relative h-full flex flex-col justify-end p-6 pb-12">
+<div class="mb-4">
+<span class="text-primary font-black text-6xl opacity-50 block leading-none">"</span>
+<p class="text-white text-3xl font-black leading-tight italic uppercase -mt-6">
+          The Fit Club <span class="text-primary">Changed</span> My Perspective On Fitness Entirely.
+        </p>
+</div>
+<div class="flex items-center gap-4 border-t border-white/20 pt-6">
+<div>
+<h4 class="text-white font-black text-xl uppercase tracking-tighter">Mathew K. Johnson</h4>
+<p class="text-primary text-xs font-bold uppercase tracking-widest">Elite Member since 2022</p>
+</div>
+<div class="ml-auto">
+<span class="text-7xl font-black text-outline uppercase select-none">STORY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Footer & Newsletter -->
+<footer class="bg-background-dark border-t border-white/5 pt-12 pb-8 px-6">
+<div class="flex flex-col gap-10">
+<!-- Newsletter -->
+<div>
+<h3 class="text-white text-xl font-black uppercase mb-4 tracking-tighter">Stay <span class="text-primary">Motivated</span></h3>
+<p class="text-gray-400 text-sm mb-4">Get the latest workout tips and exclusive offers.</p>
+<div class="relative">
+<input class="w-full bg-[#27261b] border-none rounded-full h-12 px-6 text-sm focus:ring-1 focus:ring-primary text-white" placeholder="Your email address" type="email"/>
+<button class="absolute right-1 top-1 bg-primary text-background-dark w-10 h-10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase">Quick Links</h4>
+<a class="text-gray-400 text-sm hover:text-primary" href="#">Classes</a>
+<a class="text-gray-400 text-sm hover:text-primary" href="#">Schedule</a>
+<a class="text-gray-400 text-sm hover:text-primary" href="#">Trainers</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase">Support</h4>
+<a class="text-gray-400 text-sm hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-gray-400 text-sm hover:text-primary" href="#">Terms of Use</a>
+<a class="text-gray-400 text-sm hover:text-primary" href="#">Contact Us</a>
+</div>
+</div>
+<!-- Social & Legal -->
+<div class="pt-8 border-t border-white/5 flex flex-col items-center gap-6">
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+</a>
+</div>
+<p class="text-gray-600 text-[10px] uppercase tracking-[0.2em]">© 2024 The Fit Club. All Rights Reserved.</p>
+</div>
 </div>
 </footer>
-<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-dark/95 backdrop-blur-xl border-t border-white/10 z-[100] flex justify-around items-center py-4 px-6 rounded-t-3xl">
-<button class="text-primary">
-<span class="material-symbols-outlined text-2xl filled">home</span>
-</button>
-<button class="text-zinc-500">
-<span class="material-symbols-outlined text-2xl">explore</span>
-</button>
-<div class="relative -mt-12">
-<button class="bg-primary text-dark w-14 h-14 flex items-center justify-center shadow-[0_10px_20px_rgba(244,137,21,0.3)] rotate-45">
-<span class="material-symbols-outlined text-3xl -rotate-45">add</span>
-</button>
-</div>
-<button class="text-zinc-500">
-<span class="material-symbols-outlined text-2xl">monitoring</span>
-</button>
-<button class="text-zinc-500">
-<span class="material-symbols-outlined text-2xl">person</span>
-</button>
-</nav>
-<div class="h-6 w-full fixed bottom-0 max-w-md mx-auto bg-dark z-[101]"></div>
-</div>
-
-</body></html> 
+</body></html>
