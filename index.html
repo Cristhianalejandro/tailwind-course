@@ -2,7 +2,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Fit Club | Ultra-Premium Performance</title>
+<title>The Fit Club | Full Experience V4</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;display=swap" rel="stylesheet"/>
@@ -14,7 +14,8 @@
             }
         }
         :root {
-            --primary: #dfff00;--bg-dark: #0a0a0a;
+            --primary: #dfff00;
+            --bg-dark: #0a0a0a;
             --graphite: #121212;
         }
         .animated-gradient {
@@ -59,6 +60,10 @@
             box-shadow: 0 0 30px rgba(223, 255, 0, 0.15);
             transform: translateY(-5px);
         }
+        .premium-glow-border {
+            border: 1px solid var(--primary);
+            box-shadow: 0 0 20px rgba(223, 255, 0, 0.2), inset 0 0 10px rgba(223, 255, 0, 0.1);
+        }
         .volt-glow {
             filter: drop-shadow(0 0 40px rgba(223, 255, 0, 0.4));
         }
@@ -85,6 +90,9 @@
         }
         @keyframes dash {
             to { stroke-dashoffset: 0; }
+        }
+        .dark-map {
+            filter: grayscale(1) invert(0.9) brightness(0.4) contrast(1.2);
         }
     </style>
 <style>
@@ -116,7 +124,7 @@
 <div class="lg:col-span-7 flex flex-col gap-6">
 <div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 w-fit px-4 py-2 rounded-full">
 <span class="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse"></span>
-<span class="text-[10px] font-black uppercase tracking-[0.2em] text-white/70">Ultra-Premium V3 / High Performance</span>
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-white/70">Ultra-Premium V4 / High Performance</span>
 </div>
 <h2 class="text-6xl md:text-8xl lg:text-[110px] leading-[0.8] text-metallic font-bold uppercase italic mb-4">
                     STRENGTH <br/>
@@ -137,7 +145,7 @@
 <div class="lg:col-span-5 relative">
 <div class="absolute inset-0 bg-[var(--primary)]/20 blur-[120px] rounded-full volt-glow"></div>
 <div class="relative hero-mask-v3 bg-neutral-900 border-l-8 border-[var(--primary)] overflow-hidden">
-<img alt="Elite athlete training" class="w-full aspect-[3/4] object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfezH6JeithhgnzLON-rd3yjX7tPMR1NmN-cbtwxVT6_pwW8-_suR5clQ7iimqglePl89hdE9czvDXZFX33lofLpNSOb2rKim0uD6tCd0qXp0olp3CoufE9vfBaAQsdUBjkbkGkz21TbRHQg5i2jfVfhl7LR2D3HiOZPJF-gH2R1BIsnb3BfkrqQyPUXWEICKThlxQrOFA-1AETRmmQ-RHjQCR7bU-XooEAtG1Rs5_UhfPbc88Uy_cqth_FW43MB-SRHv07AF2QYaq"/>
+<img alt="Elite athlete training" class="w-full aspect-[3/4] object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWBmiLFIkNfON_4-fgmeOYPNYWivhgA1T4ejRO9yOKsiqrx2hdabdp0eetAFxpsN2idTX53rCmHfMyg-2UMwC-IDqGEftGaiOoZtuUhueZ-FTFg1Ym0SC3R_AhDhfGWIbiIUtu3GjOxUoOW-snk3h1X754w9dxbS91X2S3NVJT0zQAM6WTlEPiiwxc5qzdptbSWatvAKZmTDuDs2uFyTC_K18RlL0TnglR77b8KPUOQFvAeEduHkrrhPph8BPgD06kUDMU0M69-E91"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 </div>
 <div class="absolute top-12 -right-8 glass-morphism p-6 rounded-2xl w-48 hidden md:block">
@@ -290,6 +298,165 @@
 <p class="text-xl font-black italic text-[var(--primary)]">READY</p>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 relative">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.5em]">The Investment</span>
+<h3 class="text-5xl md:text-8xl font-black uppercase italic tracking-tighter mt-6">Elite Memberships</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+<div class="glass-morphism p-10 rounded-[2rem] border-white/5 relative group transition-transform hover:scale-[1.02]">
+<p class="text-[10px] font-black text-white/40 uppercase tracking-[0.3em] mb-4">Foundation</p>
+<h4 class="text-3xl font-black italic uppercase mb-8">Core</h4>
+<div class="flex items-baseline gap-1 mb-10">
+<span class="text-4xl font-black italic">$</span>
+<span class="text-6xl font-black italic">299</span>
+<span class="text-sm font-bold text-white/40 uppercase">/mo</span>
+</div>
+<ul class="space-y-6 mb-12">
+<li class="flex items-center gap-3 text-sm text-white/70">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
+                            Standard Performance Lab Access
+                        </li>
+<li class="flex items-center gap-3 text-sm text-white/70">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
+                            Digital Biometric Tracking
+                        </li>
+<li class="flex items-center gap-3 text-sm text-white/70">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
+                            Elite Community Access
+                        </li>
+</ul>
+<button class="w-full py-5 border border-white/20 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all">
+                        Select Plan
+                    </button>
+</div>
+<div class="glass-morphism p-12 rounded-[2rem] premium-glow-border relative z-10 scale-105 bg-[#0a0a0a]">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--primary)] text-black text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+                        Most Popular
+                    </div>
+<p class="text-[10px] font-black text-[var(--primary)] uppercase tracking-[0.3em] mb-4">Elite Protocol</p>
+<h4 class="text-4xl font-black italic uppercase mb-8">Premium</h4>
+<div class="flex items-baseline gap-1 mb-10">
+<span class="text-4xl font-black italic">$</span>
+<span class="text-7xl font-black italic">599</span>
+<span class="text-sm font-bold text-white/40 uppercase">/mo</span>
+</div>
+<ul class="space-y-6 mb-12">
+<li class="flex items-center gap-3 text-sm text-white/90">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
+                            Full Performance Lab Access
+                        </li>
+<li class="flex items-center gap-3 text-sm text-white/90">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
+                            1-on-1 Biometric Review
+                        </li>
+<li class="flex items-center gap-3 text-sm text-white/90">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
+                            Advanced Hypertrophy Protocols
+                        </li>
+<li class="flex items-center gap-3 text-sm text-white/90">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
+                            Priority Recovery Suite
+                        </li>
+</ul>
+<button class="w-full py-6 bg-[var(--primary)] text-black font-black uppercase tracking-widest text-sm ultra-btn">
+                        Select Plan
+                    </button>
+</div>
+<div class="glass-morphism p-10 rounded-[2rem] border-white/5 relative group transition-transform hover:scale-[1.02]">
+<p class="text-[10px] font-black text-white/40 uppercase tracking-[0.3em] mb-4">Absolute Control</p>
+<h4 class="text-3xl font-black italic uppercase mb-8">Black</h4>
+<div class="flex items-baseline gap-1 mb-10">
+<span class="text-4xl font-black italic">$</span>
+<span class="text-6xl font-black italic">999</span>
+<span class="text-sm font-bold text-white/40 uppercase">/mo</span>
+</div>
+<ul class="space-y-6 mb-12">
+<li class="flex items-center gap-3 text-sm text-white/70">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
+                            24/7 Concierge Performance
+                        </li>
+<li class="flex items-center gap-3 text-sm text-white/70">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
+                            Custom Nutritional Bio-Design
+                        </li>
+<li class="flex items-center gap-3 text-sm text-white/70">
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
+                            Private Training Bay
+                        </li>
+</ul>
+<button class="w-full py-5 border border-white/20 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all">
+                        Select Plan
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="absolute inset-0 bg-[var(--primary)]/10 blur-[100px] rounded-full"></div>
+<div class="relative rounded-[3rem] overflow-hidden border border-white/10 aspect-square">
+<div class="absolute inset-0 bg-neutral-900 flex items-center justify-center">
+<div class="relative w-full h-full opacity-60">
+<div class="absolute inset-0 dark-map bg-[url('https://api.placeholder.com/800x800')] bg-cover opacity-30"></div>
+<div class="absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl animate-bounce">location_on</span>
+<div class="w-8 h-8 bg-[var(--primary)]/30 absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full blur-md"></div>
+</div>
+<div class="absolute top-[30%] left-[30%] opacity-40">
+<span class="material-symbols-outlined text-[var(--primary)] text-2xl">location_on</span>
+</div>
+<div class="absolute bottom-[20%] right-[25%] opacity-40">
+<span class="material-symbols-outlined text-[var(--primary)] text-2xl">location_on</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-10 glass-morphism p-6 rounded-2xl border-white/10">
+<p class="text-[10px] font-black uppercase tracking-widest text-white/40 mb-2">Primary Hub</p>
+<p class="text-lg font-black italic">GENESIS HQ / NY</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.5em]">Command Center</span>
+<h3 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mt-6 mb-16">Reach The Peak</h3>
+<div class="space-y-12">
+<div class="group cursor-pointer">
+<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] mb-4">Direct Line</p>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light">call</span>
+<span class="text-3xl md:text-5xl font-black tracking-tight group-hover:text-[var(--primary)] transition-colors">+1 (555) 000-FIT</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] mb-4">Global Liaison</p>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light">mail</span>
+<span class="text-2xl md:text-4xl font-black tracking-tight group-hover:text-[var(--primary)] transition-colors">elite@fitclub.gmail.com</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] mb-4">Physical Node</p>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light">pin_drop</span>
+<span class="text-xl md:text-2xl font-bold text-white/70 leading-snug group-hover:text-white transition-colors">
+                                    742 Performance Way, <br/>
+                                    Manhattan, NY 10001
+                                </span>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-12 border-t border-white/5 flex gap-8">
+<a class="text-[var(--primary)] text-xs font-black uppercase tracking-widest hover:underline" href="#">Schedule Tour</a>
+<a class="text-white/40 text-xs font-black uppercase tracking-widest hover:text-white transition-colors" href="#">Press Kit</a>
 </div>
 </div>
 </div>
