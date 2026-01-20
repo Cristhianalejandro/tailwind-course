@@ -1,53 +1,90 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Fit Club | Strength &amp; Power</title>
+<title>The Fit Club | Ultra-Premium Performance</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f2df0d",
-                        "background-light": "#f8f8f5",
-                        "background-dark": "#121212",
-                        "graphite": "#1A1A1B",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                },
-            },
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#050505] text-white font-['Space_Grotesk'] antialiased overflow-x-hidden;
+            }
         }
-    </script>
-<style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            -webkit-font-smoothing: antialiased;
+        :root {
+            --primary: #dfff00;--bg-dark: #0a0a0a;
+            --graphite: #121212;
         }
-        .hero-mask {
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+        .animated-gradient {
+            background: linear-gradient(-45deg, #050505, #1a1a1b, #0a0a0a, #121212);
+            background-size: 400% 400%;
+            animation: gradient-bg 15s ease infinite;
         }
-        .glass-nav {
-            background: rgba(18, 18, 18, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        @keyframes gradient-bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .neon-glow:hover {
-            box-shadow: 0 0 20px rgba(242, 223, 13, 0.3);
+        .text-metallic {
+            background: linear-gradient(
+                to bottom,
+                #ffffff 20%,
+                #a1a1aa 40%,
+                #ffffff 50%,
+                #71717a 70%,
+                #ffffff 90%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+            font-family: 'Syncopate', sans-serif;
+            letter-spacing: -0.05em;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-border-card {
+            position: relative;
+            background: #0f0f0f;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .neon-border-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(223, 255, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        .volt-glow {
+            filter: drop-shadow(0 0 40px rgba(223, 255, 0, 0.4));
+        }
+        .micro-texture {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .ultra-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .ultra-btn:hover {
+            box-shadow: 0 0 25px rgba(223, 255, 0, 0.5);
+            transform: scale(1.02);
+        }
+        .hero-mask-v3 {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .stat-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s linear infinite;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
         }
     </style>
 <style>
@@ -56,205 +93,249 @@
     }
   </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white selection:bg-primary selection:text-black">
-<!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+<body class="animated-gradient">
+<nav class="fixed top-0 left-0 right-0 z-[100] glass-morphism h-20">
+<div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-3xl font-bold">bolt</span>
-<h1 class="text-xl font-black tracking-tighter uppercase italic">The Fit Club</h1>
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl fill-1">bolt</span>
+<h1 class="text-2xl font-black tracking-tighter uppercase italic text-white">The Fit Club</h1>
 </div>
-<div class="flex items-center gap-6">
-<div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-white/70">
-<a class="hover:text-primary transition-colors" href="#">Programs</a>
-<a class="hover:text-primary transition-colors" href="#">Coaches</a>
-<a class="hover:text-primary transition-colors" href="#">Stats</a>
+<div class="hidden lg:flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.3em] text-white/50">
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Programs</a>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Performance</a>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Coaches</a>
 </div>
-<button class="bg-primary text-black px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform active:scale-95">
-                    Start Now
-                </button>
-</div>
+<button class="bg-[var(--primary)] text-black px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest ultra-btn">
+            Start Training
+        </button>
 </div>
 </nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative min-h-[90vh] flex flex-col justify-center overflow-hidden px-4 @container">
-<div class="max-w-7xl mx-auto w-full grid grid-cols-1 @[864px]:grid-cols-2 items-center gap-12 py-12">
-<div class="z-10 order-2 @[864px]:order-1">
-<div class="inline-block bg-primary/10 border border-primary/20 text-primary px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                        Elite Training Facility
-                    </div>
-<h1 class="text-6xl @[480px]:text-8xl font-black leading-[0.85] tracking-tighter uppercase mb-6 italic">
-                        STRENGTH <span class="text-primary">&amp;</span><br/>POWER
-                    </h1>
-<p class="text-lg text-slate-400 max-w-md mb-10 leading-relaxed font-light">
-                        Push your limits with high-performance training and elite coaching designed for those who refuse to be average.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-primary text-black px-8 py-4 rounded-full text-sm font-black uppercase tracking-widest neon-glow transition-all">
-                            Claim Free Pass
-                        </button>
-<button class="border border-white/10 bg-white/5 hover:bg-white/10 px-8 py-4 rounded-full text-sm font-black uppercase tracking-widest transition-all">
-                            View Programs
-                        </button>
+<main>
+<section class="relative min-h-screen flex flex-col justify-center px-6 pt-24 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 items-center gap-12 relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 w-fit px-4 py-2 rounded-full">
+<span class="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse"></span>
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-white/70">Ultra-Premium V3 / High Performance</span>
+</div>
+<h2 class="text-6xl md:text-8xl lg:text-[110px] leading-[0.8] text-metallic font-bold uppercase italic mb-4">
+                    STRENGTH <br/>
+<span class="inline-block translate-x-4 md:translate-x-12">&amp; POWER</span>
+</h2>
+<p class="text-lg text-white/40 max-w-xl font-light leading-relaxed mb-8">
+                    The next evolution of human performance. Experience training protocols once reserved for elite athletes, delivered with surgical precision.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-[var(--primary)] text-black px-10 py-5 rounded-none font-black uppercase tracking-widest ultra-btn text-sm">
+                        Access Elite Pass
+                    </button>
+<button class="border border-white/20 bg-white/5 hover:bg-white/10 px-10 py-5 rounded-none font-black uppercase tracking-widest text-sm transition-all backdrop-blur-md">
+                        Explore Systems
+                    </button>
 </div>
 </div>
-<div class="relative order-1 @[864px]:order-2">
-<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
-<div class="relative hero-mask aspect-[4/5] bg-neutral-800 overflow-hidden border-l-4 border-primary">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Intense athlete training in a dark industrial gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfezH6JeithhgnzLON-rd3yjX7tPMR1NmN-cbtwxVT6_pwW8-_suR5clQ7iimqglePl89hdE9czvDXZFX33lofLpNSOb2rKim0uD6tCd0qXp0olp3CoufE9vfBaAQsdUBjkbkGkz21TbRHQg5i2jfVfhl7LR2D3HiOZPJF-gH2R1BIsnb3BfkrqQyPUXWEICKThlxQrOFA-1AETRmmQ-RHjQCR7bU-XooEAtG1Rs5_UhfPbc88Uy_cqth_FW43MB-SRHv07AF2QYaq"/>
+<div class="lg:col-span-5 relative">
+<div class="absolute inset-0 bg-[var(--primary)]/20 blur-[120px] rounded-full volt-glow"></div>
+<div class="relative hero-mask-v3 bg-neutral-900 border-l-8 border-[var(--primary)] overflow-hidden">
+<img alt="Elite athlete training" class="w-full aspect-[3/4] object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfezH6JeithhgnzLON-rd3yjX7tPMR1NmN-cbtwxVT6_pwW8-_suR5clQ7iimqglePl89hdE9czvDXZFX33lofLpNSOb2rKim0uD6tCd0qXp0olp3CoufE9vfBaAQsdUBjkbkGkz21TbRHQg5i2jfVfhl7LR2D3HiOZPJF-gH2R1BIsnb3BfkrqQyPUXWEICKThlxQrOFA-1AETRmmQ-RHjQCR7bU-XooEAtG1Rs5_UhfPbc88Uy_cqth_FW43MB-SRHv07AF2QYaq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 </div>
-<!-- Floating Widget -->
-<div class="absolute -bottom-6 -left-6 bg-graphite border border-white/10 p-6 rounded-2xl shadow-2xl hidden @[480px]:block">
+<div class="absolute top-12 -right-8 glass-morphism p-6 rounded-2xl w-48 hidden md:block">
+<p class="text-[8px] uppercase tracking-widest text-white/50 mb-2">Heart Rate Variability</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-black text-[var(--primary)]">84</span>
+<span class="text-[10px] text-white/70 font-bold">ms</span>
+</div>
+<div class="mt-3 flex gap-1 items-end h-8">
+<div class="w-full bg-[var(--primary)] h-[60%] opacity-50"></div>
+<div class="w-full bg-[var(--primary)] h-[40%] opacity-50"></div>
+<div class="w-full bg-[var(--primary)] h-[90%] opacity-100"></div>
+<div class="w-full bg-[var(--primary)] h-[70%] opacity-50"></div>
+</div>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-morphism p-6 rounded-2xl w-56 hidden md:block">
 <div class="flex items-center gap-4">
-<div class="bg-primary p-3 rounded-xl text-black">
-<span class="material-symbols-outlined font-bold">trending_up</span>
+<div class="bg-[var(--primary)] p-3 rounded-lg">
+<span class="material-symbols-outlined text-black font-bold">query_stats</span>
 </div>
 <div>
-<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Activity level</p>
-<p class="text-xl font-black">94% Peak</p>
+<p class="text-[8px] uppercase tracking-widest text-white/50">Performance</p>
+<p class="text-xl font-black text-white">OPTIMAL</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Stats Section -->
-<section class="py-12 px-4 bg-graphite/30">
+<section class="py-32 px-6 relative micro-texture">
 <div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<div class="p-8 rounded-3xl bg-graphite border border-white/5 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
-<h3 class="text-4xl font-black text-white mb-1">12K+</h3>
-<p class="text-xs uppercase tracking-widest text-slate-500">Active Members</p>
+<div class="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+<div class="max-w-2xl">
+<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.4em]">Elite Curriculum</span>
+<h3 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mt-4">Systemic Mastery</h3>
 </div>
-<div class="p-8 rounded-3xl bg-graphite border border-white/5 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
-<h3 class="text-4xl font-black text-white mb-1">45+</h3>
-<p class="text-xs uppercase tracking-widest text-slate-500">Elite Coaches</p>
+<p class="text-white/40 max-w-sm text-right font-light">
+                    Every protocol is engineered for specific physiological adaptations. No fluff, just results.
+                </p>
 </div>
-<div class="p-8 rounded-3xl bg-graphite border border-white/5 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
-<h3 class="text-4xl font-black text-white mb-1">150</h3>
-<p class="text-xs uppercase tracking-widest text-slate-500">Weekly Classes</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="neon-border-card p-10 group overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="text-6xl font-black italic">01</span>
 </div>
-<div class="p-8 rounded-3xl bg-graphite border border-white/5 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
-<h3 class="text-4xl font-black text-white mb-1">98%</h3>
-<p class="text-xs uppercase tracking-widest text-slate-500">Success Rate</p>
+<div class="mb-10 text-[var(--primary)]">
+<span class="material-symbols-outlined text-5xl !font-thin">architecture</span>
+</div>
+<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Hypertrophy</h4>
+<p class="text-white/40 text-sm leading-relaxed mb-8">Surgical muscle architecture through volume-load optimization.</p>
+<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
+                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
+</a>
+</div>
+<div class="neon-border-card p-10 group overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="text-6xl font-black italic">02</span>
+</div>
+<div class="mb-10 text-[var(--primary)]">
+<span class="material-symbols-outlined text-5xl !font-thin">speed</span>
+</div>
+<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Anaerobic</h4>
+<p class="text-white/40 text-sm leading-relaxed mb-8">Breaking the metabolic ceiling with high-intensity intervals.</p>
+<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
+                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
+</a>
+</div>
+<div class="neon-border-card p-10 group overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="text-6xl font-black italic">03</span>
+</div>
+<div class="mb-10 text-[var(--primary)]">
+<span class="material-symbols-outlined text-5xl !font-thin">settings_accessibility</span>
+</div>
+<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Functional</h4>
+<p class="text-white/40 text-sm leading-relaxed mb-8">Kinetic chain optimization for real-world dominance.</p>
+<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
+                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
+</a>
+</div>
+<div class="neon-border-card p-10 group overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="text-6xl font-black italic">04</span>
+</div>
+<div class="mb-10 text-[var(--primary)]">
+<span class="material-symbols-outlined text-5xl !font-thin">restart_alt</span>
+</div>
+<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Regen</h4>
+<p class="text-white/40 text-sm leading-relaxed mb-8">Strategic biological restoration and tissue recovery.</p>
+<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
+                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
+</a>
 </div>
 </div>
 </div>
 </section>
-<!-- Programs Header -->
-<div class="max-w-7xl mx-auto px-4 pt-24 pb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto bg-neutral-900 border border-white/5 rounded-[4rem] overflow-hidden p-8 md:p-20 relative">
+<div class="absolute top-0 right-0 w-1/2 h-1/2 bg-[var(--primary)]/10 blur-[150px]"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div>
-<span class="text-primary text-sm font-black uppercase tracking-[0.3em]">Our Curriculum</span>
-<h2 class="text-4xl @[480px]:text-5xl font-black uppercase tracking-tighter mt-2 italic">Elite Programs</h2>
+<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.3em]">Proprietary OS</span>
+<h2 class="text-5xl md:text-7xl font-black uppercase italic leading-[0.9] tracking-tighter mt-6 mb-8">
+                        Track Your <br/> Evolution
+                    </h2>
+<p class="text-white/60 text-lg mb-12 font-light max-w-md">
+                        Our integrated performance dashboard synchronizes with multi-source biometric data to provide the most precise training feedback on the market.
+                    </p>
+<button class="bg-white text-black px-12 py-5 font-black uppercase tracking-widest text-sm ultra-btn">
+                        Launch Dashboard
+                    </button>
 </div>
-<p class="text-slate-500 max-w-sm text-sm">Tailored performance frameworks for athletes who demand precision in every rep.</p>
-</div>
-<!-- Programs Grid -->
-<section class="max-w-7xl mx-auto px-4 pb-24">
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Program Card 1 -->
-<div class="group relative bg-graphite border border-white/5 p-8 rounded-3xl hover:bg-neutral-800 transition-all duration-300">
-<div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">fitness_center</span>
-</div>
-<h3 class="text-xl font-bold mb-3 uppercase italic">Hypertrophy</h3>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">Advanced volume-based training systems focused on maximum muscle architecture.</p>
-<a class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all" href="#">
-                        Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Program Card 2 -->
-<div class="group relative bg-graphite border border-white/5 p-8 rounded-3xl hover:bg-neutral-800 transition-all duration-300">
-<div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">bolt</span>
-</div>
-<h3 class="text-xl font-bold mb-3 uppercase italic">Endurance</h3>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">High-intensity metabolic conditioning to redefine your aerobic ceiling.</p>
-<a class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all" href="#">
-                        Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Program Card 3 -->
-<div class="group relative bg-graphite border border-white/5 p-8 rounded-3xl hover:bg-neutral-800 transition-all duration-300">
-<div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">sports_gymnastics</span>
-</div>
-<h3 class="text-xl font-bold mb-3 uppercase italic">Functional</h3>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">Dynamic movement patterns designed for real-world performance and stability.</p>
-<a class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all" href="#">
-                        Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Program Card 4 -->
-<div class="group relative bg-graphite border border-white/5 p-8 rounded-3xl hover:bg-neutral-800 transition-all duration-300">
-<div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">self_improvement</span>
-</div>
-<h3 class="text-xl font-bold mb-3 uppercase italic">Recovery</h3>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">Tactical mobility and tissue work to optimize physiological restoration.</p>
-<a class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all" href="#">
-                        Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Performance Stats Showcase -->
-<section class="max-w-7xl mx-auto px-4 pb-24">
-<div class="bg-primary p-8 md:p-16 rounded-[3rem] text-black grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="glass-morphism rounded-3xl p-8 border-white/10 relative overflow-hidden">
+<div class="flex justify-between items-center mb-10">
 <div>
-<h2 class="text-4xl md:text-6xl font-black uppercase italic leading-[0.9] tracking-tighter mb-6">Track Your Evolution</h2>
-<p class="text-black/70 text-lg mb-8 font-medium">Our proprietary analytics dashboard synchronizes with your biometrics to provide real-time performance feedback.</p>
-<button class="bg-black text-white px-8 py-4 rounded-full text-sm font-black uppercase tracking-widest">Open Dashboard</button>
+<p class="text-[10px] uppercase font-black tracking-widest text-white/40">Real-time Session</p>
+<p class="text-2xl font-black italic">PEAK STATE</p>
 </div>
-<div class="bg-black/5 rounded-3xl p-6 flex flex-col gap-4">
-<div class="bg-black text-white p-6 rounded-2xl">
-<div class="flex justify-between items-center mb-4">
-<span class="text-[10px] uppercase font-black tracking-widest">Active Calories</span>
-<span class="material-symbols-outlined text-primary">monitoring</span>
+<div class="bg-[var(--primary)]/20 p-3 rounded-full">
+<span class="material-symbols-outlined text-[var(--primary)]">sensors</span>
 </div>
-<div class="flex items-end gap-1 h-20">
-<div class="bg-white/20 w-full h-[40%] rounded-t-sm"></div>
-<div class="bg-white/20 w-full h-[60%] rounded-t-sm"></div>
-<div class="bg-white/20 w-full h-[30%] rounded-t-sm"></div>
-<div class="bg-primary w-full h-[90%] rounded-t-sm"></div>
-<div class="bg-white/20 w-full h-[50%] rounded-t-sm"></div>
-<div class="bg-white/20 w-full h-[75%] rounded-t-sm"></div>
-<div class="bg-white/20 w-full h-[45%] rounded-t-sm"></div>
 </div>
-<div class="mt-4 flex justify-between">
-<span class="text-2xl font-black tracking-tighter">1,240 <span class="text-xs text-white/50">Kcal</span></span>
-<span class="text-primary text-xs font-bold">+12% vs LW</span>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-[10px] uppercase font-bold text-white/60 tracking-wider">Metabolic Strain</span>
+<span class="text-[10px] text-[var(--primary)] font-bold">88%</span>
+</div>
+<div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+<div class="bg-[var(--primary)] h-full w-[88%] shadow-[0_0_10px_rgba(223,255,0,0.8)]"></div>
+</div>
+</div>
+<div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+<div class="flex justify-between items-end mb-4">
+<div class="text-3xl font-black italic tracking-tighter">1,842 <span class="text-xs uppercase font-medium text-white/30 not-italic">kcal</span></div>
+<div class="text-[var(--primary)] text-[10px] font-black uppercase tracking-widest">+18.2% SESSION AVG</div>
+</div>
+<svg class="w-full h-24" viewBox="0 0 400 100">
+<path class="stat-line" d="M0 80 Q 50 20 100 70 T 200 40 T 300 60 T 400 20" fill="none" stroke="var(--primary)" stroke-width="3"></path>
+<path d="M0 100 Q 50 40 100 90 T 200 60 T 300 80 T 400 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"></path>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 p-4 rounded-xl border border-white/5">
+<p class="text-[8px] uppercase tracking-widest text-white/40 mb-1">VO2 Max</p>
+<p class="text-xl font-black italic">54.2</p>
+</div>
+<div class="bg-white/5 p-4 rounded-xl border border-white/5">
+<p class="text-[8px] uppercase tracking-widest text-white/40 mb-1">Recovery</p>
+<p class="text-xl font-black italic text-[var(--primary)]">READY</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Footer -->
-<footer class="bg-black py-20 px-4 border-t border-white/5">
+<footer class="bg-black py-32 px-6 border-t border-white/5">
 <div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-16">
-<div class="text-center md:text-left">
-<div class="flex items-center justify-center md:justify-start gap-2 mb-4">
-<span class="material-symbols-outlined text-primary text-4xl font-bold">bolt</span>
-<span class="text-2xl font-black tracking-tighter uppercase italic">The Fit Club</span>
+<div class="flex flex-col md:flex-row justify-between items-start gap-20 mb-20">
+<div class="max-w-md">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-[var(--primary)] text-5xl font-bold fill-1">bolt</span>
+<span class="text-3xl font-black tracking-tighter uppercase italic">The Fit Club</span>
 </div>
-<p class="text-slate-500 max-w-xs">Redefining human potential through science and sweat since 2018.</p>
+<p class="text-white/40 text-lg font-light leading-relaxed">
+                        Architecting the future of human performance through science-driven training and elite technological integration.
+                    </p>
 </div>
-<div class="flex gap-10 text-xs font-black uppercase tracking-widest">
-<a class="hover:text-primary transition-colors" href="#">Instagram</a>
-<a class="hover:text-primary transition-colors" href="#">Twitter</a>
-<a class="hover:text-primary transition-colors" href="#">YouTube</a>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-16 uppercase tracking-[0.2em] font-black text-[10px]">
+<div class="flex flex-col gap-6">
+<span class="text-white/20">Protocols</span>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Hypertrophy</a>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Anaerobic</a>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Functional</a>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-white/20">Social</span>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Instagram</a>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Twitter</a>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">YouTube</a>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-white/20">Legal</span>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Privacy</a>
+<a class="hover:text-[var(--primary)] transition-colors" href="#">Terms</a>
 </div>
 </div>
-<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-[10px] text-slate-600 uppercase tracking-widest">© 2024 The Fit Club. High Performance Guaranteed.</p>
-<div class="flex gap-6 text-[10px] text-slate-600 uppercase tracking-widest">
-<a href="#">Privacy</a>
-<a href="#">Terms</a>
+</div>
+<div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[8px] text-white/30 uppercase tracking-[0.5em]">© 2024 THE FIT CLUB. HIGH PERFORMANCE BIOMETRICS INTEGRATED.</p>
+<div class="flex items-center gap-4 text-white/30">
+<span class="material-symbols-outlined text-sm">security</span>
+<span class="text-[8px] uppercase tracking-widest font-black">Encrypted Connection</span>
 </div>
 </div>
 </div>
 </footer>
 </main>
+
 </body></html>
