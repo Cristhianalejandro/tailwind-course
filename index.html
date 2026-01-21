@@ -2,7 +2,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Fit Club | Full Experience V4</title>
+<title>The Fit Club | Elite Full Design</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;display=swap" rel="stylesheet"/>
@@ -21,12 +21,6 @@
         .animated-gradient {
             background: linear-gradient(-45deg, #050505, #1a1a1b, #0a0a0a, #121212);
             background-size: 400% 400%;
-            animation: gradient-bg 15s ease infinite;
-        }
-        @keyframes gradient-bg {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
         .text-metallic {
             background: linear-gradient(
@@ -83,16 +77,15 @@
         .hero-mask-v3 {
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
-        .stat-line {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: dash 3s linear infinite;
-        }
-        @keyframes dash {
-            to { stroke-dashoffset: 0; }
-        }
         .dark-map {
-            filter: grayscale(1) invert(0.9) brightness(0.4) contrast(1.2);
+            filter: grayscale(1) invert(0.9) brightness(0.2) contrast(1.5);
+            background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%);
+        }
+        .prize-glow {
+            box-shadow: 0 0 40px rgba(223, 255, 0, 0.1);
+        }
+        .prize-glow:hover {
+            box-shadow: 0 0 60px rgba(223, 255, 0, 0.25);
         }
     </style>
 <style>
@@ -121,23 +114,23 @@
 <main>
 <section class="relative min-h-screen flex flex-col justify-center px-6 pt-24 overflow-hidden">
 <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 items-center gap-12 relative z-10">
-<div class="lg:col-span-7 flex flex-col gap-6">
-<div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 w-fit px-4 py-2 rounded-full">
+<div class="lg:col-span-7 flex flex-col gap-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 w-fit px-4 py-2 rounded-full mx-auto lg:mx-0">
 <span class="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse"></span>
 <span class="text-[10px] font-black uppercase tracking-[0.2em] text-white/70">Ultra-Premium V4 / High Performance</span>
 </div>
-<h2 class="text-6xl md:text-8xl lg:text-[110px] leading-[0.8] text-metallic font-bold uppercase italic mb-4">
+<h2 class="text-5xl md:text-8xl lg:text-[110px] leading-[0.8] text-metallic font-bold uppercase italic mb-4">
                     STRENGTH <br/>
-<span class="inline-block translate-x-4 md:translate-x-12">&amp; POWER</span>
+<span class="inline-block translate-x-0 md:translate-x-12">&amp; POWER</span>
 </h2>
-<p class="text-lg text-white/40 max-w-xl font-light leading-relaxed mb-8">
+<p class="text-lg text-white/40 max-w-xl font-light leading-relaxed mb-8 mx-auto lg:mx-0">
                     The next evolution of human performance. Experience training protocols once reserved for elite athletes, delivered with surgical precision.
                 </p>
-<div class="flex flex-col sm:flex-row gap-6">
+<div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
 <button class="bg-[var(--primary)] text-black px-10 py-5 rounded-none font-black uppercase tracking-widest ultra-btn text-sm">
                         Access Elite Pass
                     </button>
-<button class="border border-white/20 bg-white/5 hover:bg-white/10 px-10 py-5 rounded-none font-black uppercase tracking-widest text-sm transition-all backdrop-blur-md">
+<button class="border border-white/20 bg-white/5 hover:bg-white/10 px-10 py-5 rounded-none font-black uppercase tracking-widest text-sm transition-all backdrop-blur-md text-white">
                         Explore Systems
                     </button>
 </div>
@@ -147,158 +140,6 @@
 <div class="relative hero-mask-v3 bg-neutral-900 border-l-8 border-[var(--primary)] overflow-hidden">
 <img alt="Elite athlete training" class="w-full aspect-[3/4] object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWBmiLFIkNfON_4-fgmeOYPNYWivhgA1T4ejRO9yOKsiqrx2hdabdp0eetAFxpsN2idTX53rCmHfMyg-2UMwC-IDqGEftGaiOoZtuUhueZ-FTFg1Ym0SC3R_AhDhfGWIbiIUtu3GjOxUoOW-snk3h1X754w9dxbS91X2S3NVJT0zQAM6WTlEPiiwxc5qzdptbSWatvAKZmTDuDs2uFyTC_K18RlL0TnglR77b8KPUOQFvAeEduHkrrhPph8BPgD06kUDMU0M69-E91"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-</div>
-<div class="absolute top-12 -right-8 glass-morphism p-6 rounded-2xl w-48 hidden md:block">
-<p class="text-[8px] uppercase tracking-widest text-white/50 mb-2">Heart Rate Variability</p>
-<div class="flex items-baseline gap-2">
-<span class="text-3xl font-black text-[var(--primary)]">84</span>
-<span class="text-[10px] text-white/70 font-bold">ms</span>
-</div>
-<div class="mt-3 flex gap-1 items-end h-8">
-<div class="w-full bg-[var(--primary)] h-[60%] opacity-50"></div>
-<div class="w-full bg-[var(--primary)] h-[40%] opacity-50"></div>
-<div class="w-full bg-[var(--primary)] h-[90%] opacity-100"></div>
-<div class="w-full bg-[var(--primary)] h-[70%] opacity-50"></div>
-</div>
-</div>
-<div class="absolute -bottom-8 -left-8 glass-morphism p-6 rounded-2xl w-56 hidden md:block">
-<div class="flex items-center gap-4">
-<div class="bg-[var(--primary)] p-3 rounded-lg">
-<span class="material-symbols-outlined text-black font-bold">query_stats</span>
-</div>
-<div>
-<p class="text-[8px] uppercase tracking-widest text-white/50">Performance</p>
-<p class="text-xl font-black text-white">OPTIMAL</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-32 px-6 relative micro-texture">
-<div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
-<div class="max-w-2xl">
-<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.4em]">Elite Curriculum</span>
-<h3 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mt-4">Systemic Mastery</h3>
-</div>
-<p class="text-white/40 max-w-sm text-right font-light">
-                    Every protocol is engineered for specific physiological adaptations. No fluff, just results.
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-<div class="neon-border-card p-10 group overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10">
-<span class="text-6xl font-black italic">01</span>
-</div>
-<div class="mb-10 text-[var(--primary)]">
-<span class="material-symbols-outlined text-5xl !font-thin">architecture</span>
-</div>
-<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Hypertrophy</h4>
-<p class="text-white/40 text-sm leading-relaxed mb-8">Surgical muscle architecture through volume-load optimization.</p>
-<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
-                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
-</a>
-</div>
-<div class="neon-border-card p-10 group overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10">
-<span class="text-6xl font-black italic">02</span>
-</div>
-<div class="mb-10 text-[var(--primary)]">
-<span class="material-symbols-outlined text-5xl !font-thin">speed</span>
-</div>
-<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Anaerobic</h4>
-<p class="text-white/40 text-sm leading-relaxed mb-8">Breaking the metabolic ceiling with high-intensity intervals.</p>
-<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
-                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
-</a>
-</div>
-<div class="neon-border-card p-10 group overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10">
-<span class="text-6xl font-black italic">03</span>
-</div>
-<div class="mb-10 text-[var(--primary)]">
-<span class="material-symbols-outlined text-5xl !font-thin">settings_accessibility</span>
-</div>
-<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Functional</h4>
-<p class="text-white/40 text-sm leading-relaxed mb-8">Kinetic chain optimization for real-world dominance.</p>
-<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
-                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
-</a>
-</div>
-<div class="neon-border-card p-10 group overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10">
-<span class="text-6xl font-black italic">04</span>
-</div>
-<div class="mb-10 text-[var(--primary)]">
-<span class="material-symbols-outlined text-5xl !font-thin">restart_alt</span>
-</div>
-<h4 class="text-2xl font-black uppercase italic mb-4 group-hover:text-[var(--primary)] transition-colors">Regen</h4>
-<p class="text-white/40 text-sm leading-relaxed mb-8">Strategic biological restoration and tissue recovery.</p>
-<a class="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-[var(--primary)]" href="#">
-                        Initialize <span class="w-8 h-px bg-[var(--primary)]"></span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<section class="py-32 px-6">
-<div class="max-w-7xl mx-auto bg-neutral-900 border border-white/5 rounded-[4rem] overflow-hidden p-8 md:p-20 relative">
-<div class="absolute top-0 right-0 w-1/2 h-1/2 bg-[var(--primary)]/10 blur-[150px]"></div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div>
-<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.3em]">Proprietary OS</span>
-<h2 class="text-5xl md:text-7xl font-black uppercase italic leading-[0.9] tracking-tighter mt-6 mb-8">
-                        Track Your <br/> Evolution
-                    </h2>
-<p class="text-white/60 text-lg mb-12 font-light max-w-md">
-                        Our integrated performance dashboard synchronizes with multi-source biometric data to provide the most precise training feedback on the market.
-                    </p>
-<button class="bg-white text-black px-12 py-5 font-black uppercase tracking-widest text-sm ultra-btn">
-                        Launch Dashboard
-                    </button>
-</div>
-<div class="glass-morphism rounded-3xl p-8 border-white/10 relative overflow-hidden">
-<div class="flex justify-between items-center mb-10">
-<div>
-<p class="text-[10px] uppercase font-black tracking-widest text-white/40">Real-time Session</p>
-<p class="text-2xl font-black italic">PEAK STATE</p>
-</div>
-<div class="bg-[var(--primary)]/20 p-3 rounded-full">
-<span class="material-symbols-outlined text-[var(--primary)]">sensors</span>
-</div>
-</div>
-<div class="space-y-8">
-<div>
-<div class="flex justify-between mb-2">
-<span class="text-[10px] uppercase font-bold text-white/60 tracking-wider">Metabolic Strain</span>
-<span class="text-[10px] text-[var(--primary)] font-bold">88%</span>
-</div>
-<div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
-<div class="bg-[var(--primary)] h-full w-[88%] shadow-[0_0_10px_rgba(223,255,0,0.8)]"></div>
-</div>
-</div>
-<div class="bg-white/5 p-6 rounded-2xl border border-white/5">
-<div class="flex justify-between items-end mb-4">
-<div class="text-3xl font-black italic tracking-tighter">1,842 <span class="text-xs uppercase font-medium text-white/30 not-italic">kcal</span></div>
-<div class="text-[var(--primary)] text-[10px] font-black uppercase tracking-widest">+18.2% SESSION AVG</div>
-</div>
-<svg class="w-full h-24" viewBox="0 0 400 100">
-<path class="stat-line" d="M0 80 Q 50 20 100 70 T 200 40 T 300 60 T 400 20" fill="none" stroke="var(--primary)" stroke-width="3"></path>
-<path d="M0 100 Q 50 40 100 90 T 200 60 T 300 80 T 400 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"></path>
-</svg>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-white/5 p-4 rounded-xl border border-white/5">
-<p class="text-[8px] uppercase tracking-widest text-white/40 mb-1">VO2 Max</p>
-<p class="text-xl font-black italic">54.2</p>
-</div>
-<div class="bg-white/5 p-4 rounded-xl border border-white/5">
-<p class="text-[8px] uppercase tracking-widest text-white/40 mb-1">Recovery</p>
-<p class="text-xl font-black italic text-[var(--primary)]">READY</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -320,26 +161,19 @@
 </div>
 <ul class="space-y-6 mb-12">
 <li class="flex items-center gap-3 text-sm text-white/70">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
-                            Standard Performance Lab Access
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span> Standard Performance Lab Access
                         </li>
 <li class="flex items-center gap-3 text-sm text-white/70">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
-                            Digital Biometric Tracking
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span> Digital Biometric Tracking
                         </li>
 <li class="flex items-center gap-3 text-sm text-white/70">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
-                            Elite Community Access
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span> Elite Community Access
                         </li>
 </ul>
-<button class="w-full py-5 border border-white/20 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all">
-                        Select Plan
-                    </button>
+<button class="w-full py-5 border border-white/20 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all">Select Plan</button>
 </div>
-<div class="glass-morphism p-12 rounded-[2rem] premium-glow-border relative z-10 scale-105 bg-[#0a0a0a]">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--primary)] text-black text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
-                        Most Popular
-                    </div>
+<div class="glass-morphism p-12 rounded-[2rem] premium-glow-border relative z-10 scale-100 md:scale-105 bg-[#0a0a0a]">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--primary)] text-black text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Most Popular</div>
 <p class="text-[10px] font-black text-[var(--primary)] uppercase tracking-[0.3em] mb-4">Elite Protocol</p>
 <h4 class="text-4xl font-black italic uppercase mb-8">Premium</h4>
 <div class="flex items-baseline gap-1 mb-10">
@@ -349,25 +183,16 @@
 </div>
 <ul class="space-y-6 mb-12">
 <li class="flex items-center gap-3 text-sm text-white/90">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
-                            Full Performance Lab Access
+<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span> Full Performance Lab Access
                         </li>
 <li class="flex items-center gap-3 text-sm text-white/90">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
-                            1-on-1 Biometric Review
+<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span> 1-on-1 Biometric Review
                         </li>
 <li class="flex items-center gap-3 text-sm text-white/90">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
-                            Advanced Hypertrophy Protocols
-                        </li>
-<li class="flex items-center gap-3 text-sm text-white/90">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span>
-                            Priority Recovery Suite
+<span class="material-symbols-outlined text-[var(--primary)] text-xl fill-1">check_circle</span> Advanced Hypertrophy Protocols
                         </li>
 </ul>
-<button class="w-full py-6 bg-[var(--primary)] text-black font-black uppercase tracking-widest text-sm ultra-btn">
-                        Select Plan
-                    </button>
+<button class="w-full py-6 bg-[var(--primary)] text-black font-black uppercase tracking-widest text-sm ultra-btn">Select Plan</button>
 </div>
 <div class="glass-morphism p-10 rounded-[2rem] border-white/5 relative group transition-transform hover:scale-[1.02]">
 <p class="text-[10px] font-black text-white/40 uppercase tracking-[0.3em] mb-4">Absolute Control</p>
@@ -379,74 +204,136 @@
 </div>
 <ul class="space-y-6 mb-12">
 <li class="flex items-center gap-3 text-sm text-white/70">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
-                            24/7 Concierge Performance
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span> 24/7 Concierge Performance
                         </li>
 <li class="flex items-center gap-3 text-sm text-white/70">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
-                            Custom Nutritional Bio-Design
-                        </li>
-<li class="flex items-center gap-3 text-sm text-white/70">
-<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span>
-                            Private Training Bay
+<span class="material-symbols-outlined text-[var(--primary)] text-xl">check_circle</span> Custom Nutritional Bio-Design
                         </li>
 </ul>
-<button class="w-full py-5 border border-white/20 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all">
-                        Select Plan
-                    </button>
+<button class="w-full py-5 border border-white/20 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all">Select Plan</button>
 </div>
 </div>
 </div>
 </section>
-<section class="py-32 px-6">
+<section class="py-32 px-6 bg-[#080808] relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--primary)]/30 to-transparent"></div>
 <div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-<div class="relative order-2 lg:order-1">
-<div class="absolute inset-0 bg-[var(--primary)]/10 blur-[100px] rounded-full"></div>
-<div class="relative rounded-[3rem] overflow-hidden border border-white/10 aspect-square">
-<div class="absolute inset-0 bg-neutral-900 flex items-center justify-center">
-<div class="relative w-full h-full opacity-60">
-<div class="absolute inset-0 dark-map bg-[url('https://api.placeholder.com/800x800')] bg-cover opacity-30"></div>
-<div class="absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2">
-<span class="material-symbols-outlined text-[var(--primary)] text-4xl animate-bounce">location_on</span>
-<div class="w-8 h-8 bg-[var(--primary)]/30 absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full blur-md"></div>
+<div class="flex flex-col items-center mb-20 text-center">
+<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.5em] mb-4">Glory Awaits</span>
+<h3 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter">Championship Prizes</h3>
+<p class="text-white/40 mt-6 max-w-lg font-light">Surpass your limits and claim the ultimate recognition. Elite performance deserves elite rewards.</p>
 </div>
-<div class="absolute top-[30%] left-[30%] opacity-40">
-<span class="material-symbols-outlined text-[var(--primary)] text-2xl">location_on</span>
-</div>
-<div class="absolute bottom-[20%] right-[25%] opacity-40">
-<span class="material-symbols-outlined text-[var(--primary)] text-2xl">location_on</span>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass-morphism p-8 border-white/5 relative overflow-hidden group prize-glow transition-all">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-[var(--primary)]/5 rounded-full blur-2xl group-hover:bg-[var(--primary)]/10 transition-colors"></div>
+<span class="material-symbols-outlined text-[var(--primary)] text-6xl mb-8 font-thin drop-shadow-[0_0_15px_rgba(223,255,0,0.5)]">trophy</span>
+<h4 class="text-xl font-black uppercase italic mb-2">Alpha Predator</h4>
+<p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">Top Strength Metric</p>
+<p class="text-white/60 text-sm mb-8 leading-relaxed">The ultimate titanium trophy + 1-year free Black Membership.</p>
+<div class="h-1 w-full bg-white/5 overflow-hidden">
+<div class="h-full bg-[var(--primary)] w-3/4 shadow-[0_0_10px_var(--primary)]"></div>
 </div>
 </div>
+<div class="glass-morphism p-8 border-white/5 relative overflow-hidden group prize-glow transition-all">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-[var(--primary)]/5 rounded-full blur-2xl group-hover:bg-[var(--primary)]/10 transition-colors"></div>
+<span class="material-symbols-outlined text-[var(--primary)] text-6xl mb-8 font-thin drop-shadow-[0_0_15px_rgba(223,255,0,0.5)]">military_tech</span>
+<h4 class="text-xl font-black uppercase italic mb-2">Metabolic God</h4>
+<p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">VO2 Max Champion</p>
+<p class="text-white/60 text-sm mb-8 leading-relaxed">Bespoke carbon fiber commemorative plate + Tech Bundle.</p>
+<div class="h-1 w-full bg-white/5 overflow-hidden">
+<div class="h-full bg-[var(--primary)] w-1/2 shadow-[0_0_10px_var(--primary)]"></div>
 </div>
-<div class="absolute bottom-10 left-10 glass-morphism p-6 rounded-2xl border-white/10">
-<p class="text-[10px] font-black uppercase tracking-widest text-white/40 mb-2">Primary Hub</p>
-<p class="text-lg font-black italic">GENESIS HQ / NY</p>
+</div>
+<div class="glass-morphism p-8 border-white/5 relative overflow-hidden group prize-glow transition-all">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-[var(--primary)]/5 rounded-full blur-2xl group-hover:bg-[var(--primary)]/10 transition-colors"></div>
+<span class="material-symbols-outlined text-[var(--primary)] text-6xl mb-8 font-thin drop-shadow-[0_0_15px_rgba(223,255,0,0.5)]">workspace_premium</span>
+<h4 class="text-xl font-black uppercase italic mb-2">The Architect</h4>
+<p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">Hypertrophy Excellence</p>
+<p class="text-white/60 text-sm mb-8 leading-relaxed">Personalized 3D-scanned golden bust + Supplement Stash.</p>
+<div class="h-1 w-full bg-white/5 overflow-hidden">
+<div class="h-full bg-[var(--primary)] w-1/4 shadow-[0_0_10px_var(--primary)]"></div>
+</div>
+</div>
+<div class="glass-morphism p-8 border-white/5 relative overflow-hidden group prize-glow transition-all">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-[var(--primary)]/5 rounded-full blur-2xl group-hover:bg-[var(--primary)]/10 transition-colors"></div>
+<span class="material-symbols-outlined text-[var(--primary)] text-6xl mb-8 font-thin drop-shadow-[0_0_15px_rgba(223,255,0,0.5)]">rewarded_ads</span>
+<h4 class="text-xl font-black uppercase italic mb-2">Titan Legacy</h4>
+<p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">Overall 365 Consistent</p>
+<p class="text-white/60 text-sm mb-8 leading-relaxed">Platinum ring + VIP access to Genesis Performance Summit.</p>
+<div class="h-1 w-full bg-white/5 overflow-hidden">
+<div class="h-full bg-[var(--primary)] w-full shadow-[0_0_10px_var(--primary)]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 relative bg-black">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1 h-[500px] lg:h-[700px]">
+<div class="absolute inset-0 bg-[var(--primary)]/10 blur-[120px] rounded-full scale-75"></div>
+<div class="relative h-full rounded-[3rem] overflow-hidden border border-white/10 glass-morphism shadow-2xl">
+<div class="absolute inset-0 dark-map flex items-center justify-center">
+<div class="w-full h-full opacity-60 bg-[url('https://api.placeholder.com/1200x1200')] bg-cover"></div>
+</div>
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<div class="absolute -inset-8 bg-[var(--primary)]/20 rounded-full animate-ping"></div>
+<div class="relative bg-[var(--primary)] p-4 rounded-2xl shadow-[0_0_40px_rgba(223,255,0,0.6)]">
+<span class="material-symbols-outlined text-black text-4xl font-black">location_on</span>
+</div>
+</div>
+</div>
+<div class="absolute top-10 left-10 glass-morphism p-6 rounded-2xl border-white/10 backdrop-blur-xl">
+<p class="text-[10px] font-black uppercase tracking-widest text-white/40 mb-2">Main Grid Terminal</p>
+<p class="text-xl font-black italic tracking-tighter">GENESIS HQ / NY</p>
+</div>
+<div class="absolute bottom-10 right-10 flex gap-2">
+<div class="bg-black/80 backdrop-blur-md p-3 border border-white/10 rounded-xl">
+<span class="material-symbols-outlined text-[var(--primary)]">add</span>
+</div>
+<div class="bg-black/80 backdrop-blur-md p-3 border border-white/10 rounded-xl">
+<span class="material-symbols-outlined text-[var(--primary)]">remove</span>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="order-1 lg:order-2">
-<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.5em]">Command Center</span>
-<h3 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mt-6 mb-16">Reach The Peak</h3>
-<div class="space-y-12">
+<span class="text-[var(--primary)] text-sm font-black uppercase tracking-[0.6em]">Command Center</span>
+<h3 class="text-6xl md:text-8xl font-black uppercase italic tracking-tighter mt-6 mb-16 leading-none">Reach <br/>The Peak</h3>
+<div class="space-y-16">
 <div class="group cursor-pointer">
-<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] mb-4">Direct Line</p>
+<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.4em] mb-4 flex items-center gap-2">
+<span class="w-4 h-px bg-white/20"></span> SECURE VOICE LINE
+                            </p>
 <div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light">call</span>
-<span class="text-3xl md:text-5xl font-black tracking-tight group-hover:text-[var(--primary)] transition-colors">+1 (555) 000-FIT</span>
+<div class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)]/5 transition-all">
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light group-hover:scale-110 transition-transform">call</span>
 </div>
-</div>
-<div class="group cursor-pointer">
-<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] mb-4">Global Liaison</p>
-<div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light">mail</span>
-<span class="text-2xl md:text-4xl font-black tracking-tight group-hover:text-[var(--primary)] transition-colors">elite@fitclub.gmail.com</span>
+<span class="text-3xl md:text-5xl font-black tracking-tighter group-hover:text-[var(--primary)] transition-colors">+1 555-000-FIT</span>
 </div>
 </div>
 <div class="group cursor-pointer">
-<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] mb-4">Physical Node</p>
+<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.4em] mb-4 flex items-center gap-2">
+<span class="w-4 h-px bg-white/20"></span> ENCRYPTED TRANSMISSION
+                            </p>
 <div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light">pin_drop</span>
+<div class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)]/5 transition-all">
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light group-hover:scale-110 transition-transform">mail</span>
+</div>
+<span class="text-2xl md:text-4xl font-black tracking-tighter group-hover:text-[var(--primary)] transition-colors break-all">elite@fitclub.gmail.com</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<p class="text-[10px] font-black text-white/30 uppercase tracking-[0.4em] mb-4 flex items-center gap-2">
+<span class="w-4 h-px bg-white/20"></span> PHYSICAL SECTOR
+                            </p>
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)]/5 transition-all">
+<span class="material-symbols-outlined text-[var(--primary)] text-4xl font-light group-hover:scale-110 transition-transform">location_on</span>
+</div>
 <span class="text-xl md:text-2xl font-bold text-white/70 leading-snug group-hover:text-white transition-colors">
                                     742 Performance Way, <br/>
                                     Manhattan, NY 10001
@@ -454,9 +341,13 @@
 </div>
 </div>
 </div>
-<div class="mt-20 pt-12 border-t border-white/5 flex gap-8">
-<a class="text-[var(--primary)] text-xs font-black uppercase tracking-widest hover:underline" href="#">Schedule Tour</a>
-<a class="text-white/40 text-xs font-black uppercase tracking-widest hover:text-white transition-colors" href="#">Press Kit</a>
+<div class="mt-24 pt-12 border-t border-white/10 flex flex-wrap gap-8">
+<button class="bg-[var(--primary)] text-black px-8 py-4 font-black uppercase tracking-widest text-xs ultra-btn">
+                            Book a Site Tour
+                        </button>
+<a class="flex items-center gap-3 text-white/40 text-xs font-black uppercase tracking-widest hover:text-white transition-colors" href="#">
+                            Download Protocol PDF <span class="material-symbols-outlined text-sm">download</span>
+</a>
 </div>
 </div>
 </div>
